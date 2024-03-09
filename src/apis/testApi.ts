@@ -12,6 +12,7 @@ export async function getTodo(): Promise<Todo[]> {
     const response: AxiosResponse<Todo[]> = await axios.get(
       "https://jsonplaceholder.typicode.com/todos"
     );
+
     return response.data;
   } catch (error) {
     throw error;

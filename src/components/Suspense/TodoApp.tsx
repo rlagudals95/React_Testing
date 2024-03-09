@@ -1,15 +1,18 @@
 import { Suspense } from "react";
 import { DataComponent } from "./DataComponents";
 import { LoadingFallback } from "./LoadingFallback";
-import { useTodo } from "./useTodo";
+import { ErrorBoundary } from "react-error-boundary";
+import { ErrorFallback } from "./ErrorFallback";
 
 export const TodoApp: React.FC = () => {
-
-    const todos = useTodo();
-
     return (
-        <Suspense fallback={<LoadingFallback />}>
-            <DataComponent todos={todos} />
-        </Suspense>
+        <ErrorBoundary
+            FallbackComponent={fallbackProps => <ErrorFallback {...fallbackProps} />}
+        >
+            <Suspense fallback={<LoadingFallback />}>
+                <DataComponent />
+            </Suspense>
+        </ErrorBoundary>
+
     );
 };
