@@ -8,7 +8,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
-        <title>fastfive-fe</title>
+        <title>react-testing</title>
         <link
           rel="icon"
           href="/favicon-16x16.png"
