@@ -6,9 +6,7 @@ import ReactQueryProvider from './ReactQueryProvider';
 const Home: React.FC = () => {
 
   return (
-    <ReactQueryProvider>
-      <TodoApp />
-    </ReactQueryProvider>
+    <></>
   );
 };
 
