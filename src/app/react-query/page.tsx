@@ -13,4 +13,4 @@ const ReactQueryHome: React.FC = () => {
   );
 };
 
-export default Home;
+export default ReactQueryHome;
